@@ -8,7 +8,7 @@ app.factory('Player',
 		return resource;
 	});
 
-app.controller('RaffleController', [ 
+app.controller('RaffleController', [
 	"$scope",
 	"Player",
 	function($scope, Player) {
@@ -16,7 +16,7 @@ app.controller('RaffleController', [
 		Player.query().then(function(result) {
 			$scope.players = result;
 		})
-		
+
 		$scope.addPlayer = function() {
 			var newPlayer = new Player({
 				name: $scope.newName
